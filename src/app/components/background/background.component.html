@@ -1,0 +1,32 @@
+<div [ngClass]="[unixBG() ? 'day' : 'night']" class="location__bg">
+</div>
+<div class="block-castle__outer-wrap">
+    <div class="block-castle__castle-wrap">
+        <div [ngClass]="[unixBG() ? 'day' : 'night']" class="block-castle__castle-sky">
+        </div>
+        <img class="block-castle__curr-icon" src="../assets/Icons/{{location.weather.current.weather[0].icon}}.svg">
+        <img class="block-castle__castle-cloud" src="{{location.parkInfo.cloud}}">
+        <img class="block-castle__castle-cloud two" src="{{location.parkInfo.cloud}}">
+        <img class="block-castle__castle-cloud three" src="{{location.parkInfo.cloud}}">
+        <img class="block-castle__castle-cloud four" src="{{location.parkInfo.cloud}}">
+        <div *ngIf="location.router.url == '/florida'">
+            <img class="block-castle__castle" src="{{location.parkInfo.Florida.castle}}">
+        </div>
+        <div *ngIf="location.router.url == '/california'">
+            <img class="block-castle__castle" src="{{location.parkInfo.California.castle}}">
+        </div>
+        <div *ngIf="location.router.url == '/hong-kong'">
+            <img class="block-castle__castle" src="{{location.parkInfo.HongKong.castle}}">
+        </div>
+        <div *ngIf="location.router.url == '/paris'">
+            <img class="block-castle__castle" src="{{location.parkInfo.Paris.castle}}">
+        </div>
+        <div *ngIf="location.router.url == '/shanghai'">
+            <img class="block-castle__castle" src="{{location.parkInfo.Shanghai.castle}}">
+        </div>
+        <div *ngIf="location.router.url == '/tokyo'">
+            <img class="block-castle__castle" src="{{location.parkInfo.Tokyo.castle}}">
+        </div>
+
+    </div>
+</div>

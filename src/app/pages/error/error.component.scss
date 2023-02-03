@@ -1,0 +1,39 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    // background: #394659;
+    background: linear-gradient(0deg, #090B0E, #2C3846, #7B65CD);
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+
+    &-inner {
+        background-image: url("../../../assets/Castles/FL Tokyo Castle.svg");
+        background-repeat: no-repeat;
+        width: 500px;
+        height: 700px;
+        position: absolute;
+        bottom: -28px;
+        z-index: -1;
+        right: -152px;
+    }
+}
+
+.wrapper {
+    margin: auto;
+    width: 90%;
+    max-width: 500px;
+
+    &-inner {
+        border-radius: 30px;
+        color: white;
+        margin: 4rem 0;
+        background-color: rgba(47, 59, 77, 0.95);
+        padding: 1.25rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+        a {
+            color:white;
+        }
+    }
+}

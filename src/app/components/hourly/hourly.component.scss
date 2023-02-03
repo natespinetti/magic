@@ -1,0 +1,42 @@
+.block-hourly {
+    margin-bottom: 2rem;
+    background-color: rgba(47, 59, 77, 0.95);
+    border-radius: 30px;
+    padding: 1.25rem;
+    overflow-x: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: auto;
+        overflow-x: scroll;
+        grid-template-rows: 1fr;
+        grid-gap: 10px;
+    }
+
+    &__hours {
+        grid-row:1;
+        width: 60px;
+    }
+
+    &__hour {
+        margin-bottom: .25rem;
+        font-weight: 600;
+        font-size: 20px;
+        margin-top: 0;
+    }
+
+    &__icon {
+        width: 50px;
+    }
+
+    &__temp {
+        margin-top: -0.25rem;
+        font-weight: 600;
+        font-size: 24px;
+        margin-left: 4px;
+        margin-bottom: 0;
+    }
+}

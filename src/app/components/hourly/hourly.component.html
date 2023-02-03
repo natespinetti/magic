@@ -1,0 +1,12 @@
+<div class="block-hourly">
+    <div class="block-hourly__wrapper">
+        <div class="block-hourly__hours" *ngFor="let hour of location.weather.hourly, let i = index, first as isFirst">
+            <p class="block-hourly__hour" *ngIf="isFirst; else continue">Now</p>
+              <ng-template #continue>
+                <p class="block-hourly__hour unix">{{(location.weather.hourly[i].dt) + (location.weather.timezone_offset)}}</p>
+              </ng-template>
+            <img class="block-hourly__icon" src="../assets/Icons/{{location.weather.hourly[i].weather[0].icon}}.svg">
+            <p class="block-hourly__temp">{{location.weather.hourly[i].temp | kelvin}}&deg;</p>
+        </div>
+    </div>
+</div>

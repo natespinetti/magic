@@ -1,0 +1,46 @@
+<div class="block-hero">
+    <div class="block-hero__content-wrapper">
+        <div *ngIf="location.router.url == '/florida'">
+            <p class="block-hero__place">{{location.parkInfo.Florida.place}}</p>
+            <h2 class="block-hero__park">{{location.parkInfo.Florida.park}}</h2>
+        </div>
+        <div *ngIf="location.router.url == '/california'">
+            <p class="block-hero__place">{{location.parkInfo.California.place}}</p>
+            <h2 class="block-hero__park">{{location.parkInfo.California.park}}</h2>
+        </div>
+        <div *ngIf="location.router.url == '/hong-kong'">
+            <p class="block-hero__place">{{location.parkInfo.HongKong.place}}</p>
+            <h2 class="block-hero__park">{{location.parkInfo.HongKong.park}}</h2>
+        </div>
+        <div *ngIf="location.router.url == '/paris'">
+            <p class="block-hero__place">{{location.parkInfo.Paris.place}}</p>
+            <h2 class="block-hero__park">{{location.parkInfo.Paris.park}}</h2>
+        </div>
+        <div *ngIf="location.router.url == '/shanghai'">
+            <p class="block-hero__place">{{location.parkInfo.Shanghai.place}}</p>
+            <h2 class="block-hero__park">{{location.parkInfo.Shanghai.park}}</h2>
+        </div>
+        <div *ngIf="location.router.url == '/tokyo'">
+            <p class="block-hero__place">{{location.parkInfo.Tokyo.place}}</p>
+            <h2 class="block-hero__park">{{location.parkInfo.Tokyo.park}}</h2>
+        </div>
+        <p class="block-hero__temp-current">{{location.weather.current.temp | kelvin}}&deg;</p>
+        <p class="block-hero__temp-main">{{location.weather.current.weather[0].main}}</p>
+        <p class="block-hero__temp-max-min">H:{{location.weather.daily[0].temp.max | kelvin}}&deg;
+            L:{{location.weather.daily[0].temp.min | kelvin}}&deg;</p>
+        <div class="block-hero__bullets">
+            <button [class.active]="location.router.url == '/florida'" routerLink="/florida"
+                class="block-hero__bullet"></button>
+            <button [class.active]="location.router.url == '/california'" routerLink="/california/"
+                class="block-hero__bullet"></button>
+            <button [class.active]="location.router.url == '/hong-kong'" routerLink="/hong-kong/"
+                class="block-hero__bullet"></button>
+            <button [class.active]="location.router.url == '/paris'" routerLink="/paris/" 
+                class="block-hero__bullet"></button>
+            <button [class.active]="location.router.url == '/shanghai'" routerLink="/shanghai/"
+                class="block-hero__bullet"></button>
+            <button [class.active]="location.router.url == '/tokyo'" routerLink="/tokyo/"
+                class="block-hero__bullet"></button>
+        </div>
+    </div>
+</div>

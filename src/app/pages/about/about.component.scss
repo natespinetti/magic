@@ -1,0 +1,47 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    &-inner {
+        background-image: url("../../../assets/Castles/Cali HK Paris Castle.svg");
+        background-repeat: no-repeat;
+        width: 500px;
+        height: 700px;
+        position: absolute;
+        bottom: -47px;
+        z-index: -1;
+        right: -152px;
+    }
+}
+
+.block-about__bg {
+    background: linear-gradient(0deg, #090B0E, #2C3846, #7B65CD);
+    height: 105%;
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+}
+
+.wrapper {
+    margin: auto;
+    width: 90%;
+    max-width: 500px;
+}
+
+.inner-container {
+    margin: 4rem auto;
+    background-color: rgba(47, 59, 77, 0.95);
+    border-radius: 30px;
+    padding: 1.25rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+.block-about {
+    &__copy {
+        a {
+            color: #fff;
+        }
+    }
+}

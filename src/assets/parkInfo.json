@@ -1,0 +1,47 @@
+{
+    "cloud": "../assets/Icons/03d.svg",
+    "logo": "../assets/Magic+ Logo White.svg",
+    
+    "Florida": {
+        "place": "Florida",
+        "park": "Disney World",
+        "castle": "../assets/Castles/FL Tokyo Castle.svg",
+        "logo": "../assets/Park Logos/FloridaDisney.svg"
+    },
+
+    "California": {
+        "place": "California",
+        "park": "Disneyland",
+        "castle": "../assets/Castles/Cali HK Paris Castle.svg",
+        "logo": "../assets/Park Logos/CaliforniaDisney.svg"
+    },
+
+    "HongKong": {
+        "place": "Hong Kong",
+        "park": "Disneyland",
+        "castle": "../assets/Castles/Cali HK Paris Castle.svg",
+        "logo": "../assets/Park Logos/HongKongDisney.svg"
+    },
+
+    "Paris": {
+        "place": "Paris",
+        "park": "Disneyland",
+        "castle": "../assets/Castles/Cali HK Paris Castle.svg",
+        "logo": "../assets/Park Logos/ParisDisney.svg"
+    },
+
+    "Shanghai": {
+        "place": "Shanghai",
+        "park": "Disneyland",
+        "castle": "../assets/Castles/Shanghai Castle.svg",
+        "logo": "../assets/Park Logos/ShanghaiDisney.svg"
+    },
+
+    "Tokyo": {
+        "place": "Tokyo",
+        "park": "Disneyland",
+        "castle": "../assets/Castles/FL Tokyo Castle.svg",
+        "logo": "../assets/Park Logos/TokyoDisney.svg"
+    }
+}
+  

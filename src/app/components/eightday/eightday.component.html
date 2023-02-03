@@ -1,0 +1,37 @@
+<div class="block-eightday">
+  <div class="block-eightday__wrapper">
+    <div class="block-eightday__forecast">
+      <ion-icon name="calendar"></ion-icon>
+      <p class="block-eightday__forecast-inner">8-DAY FORECAST</p>
+    </div>
+
+    <ion-accordion-group>
+      <ion-accordion *ngFor="let day of location.weather.daily, let i = index, first as isFirst" value="{{i}}">
+        <ion-item slot="header" class="ion-color-transparent">
+          <ion-label class="block-eightday__days">
+            <p class="block-eightday__day" *ngIf="isFirst; else continue">Today</p>
+            <ng-template #continue>
+              <p class="block-eightday__day dow">{{location.weather.daily[i].dt}}</p>
+            </ng-template>
+            <img class="block-eightday__icon" src="../assets/Icons/{{location.weather.daily[i].weather[0].icon}}.svg">
+            <p class="block-eightday__min-max"><span class="min">{{location.weather.daily[i].temp.min | kelvin}}&deg;
+              </span>{{location.weather.daily[i].temp.max | kelvin}}&deg;</p>
+          </ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <div class="block-eightday__acc-wrapper">
+            <p class="block-eightday__acc-wrapper-inner">Feels like: {{location.weather.daily[i].feels_like.day |
+              kelvin}}&deg;</p>
+            <p class="block-eightday__acc-wrapper-inner">Humidity: {{location.weather.daily[i].humidity}}%</p>
+            <p class="block-eightday__acc-wrapper-inner">Rain: {{location.weather.daily[i].rain | rain}}&Prime;</p>
+            <p class="block-eightday__acc-wrapper-inner">UV Index: {{location.weather.daily[i].uvi}}</p>
+            <p class="block-eightday__acc-wrapper-inner">Sunrise: <span
+                class="unixsun">{{location.weather.daily[i].sunrise}}</span></p>
+            <p class="block-eightday__acc-wrapper-inner">Sunset: <span
+                class="unixsun">{{location.weather.daily[i].sunset}}</span></p>
+          </div>
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </div>
+</div>

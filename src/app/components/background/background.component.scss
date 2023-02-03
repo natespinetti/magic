@@ -1,0 +1,89 @@
+.location {
+    &__bg {
+        height: 100%;
+        width: 100vw;
+        position: fixed;
+        z-index: -1;
+
+        &.day {
+            background: linear-gradient(0deg, #090B0E, #8956C2, #8A56C2, #4898F1);
+        }
+
+        &.night {
+            background: linear-gradient(0deg, #090B0E, #2C3846, #7B65CD);
+        }
+    }
+}
+
+.block-castle {
+    &__outer-wrap {
+        max-width: 500px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    &__castle {
+        position: absolute;
+        right: -20px;
+        width: 250px;
+        top: 26px;
+
+        &-wrap {
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+            max-width: 500px;
+            height: 500px;
+        }
+
+        &-sky {
+            height: 280px;
+            width: 280px;
+            position: absolute;
+            top: 154px;
+            right: -77px;
+            border-radius: 100%;
+            z-index: -1;
+
+            &.day {
+                box-shadow: 0 0 100px rgb(249 209 52 / 40%), inset 0 0 20px #f1a31e;
+                background: linear-gradient(45deg, #EF9919, #FCDC39);
+            }
+
+            &.night {
+                box-shadow: 0 0 100px rgb(217 215 209 / 40%), inset 0 0 20px #727272;
+                background: linear-gradient(45deg, #CDCBC9, #E3E1D7);
+            }
+        }
+
+        &-cloud {
+            position: absolute;
+            z-index: 1;
+            width: 137px;
+            top: 312px;
+            right: -50px;
+
+            &.two {
+                top: 320px;
+                right: 6px;
+            }
+
+            &.three {
+                right: 75px;
+                top: 315px;
+            }
+
+            &.four {
+                right: 127px;
+                top: 304px;
+            }
+        }
+    }
+
+    &__curr-icon {
+        position: absolute;
+        width: 100px;
+        top: 39px;
+        right: 86px;
+    }
+}

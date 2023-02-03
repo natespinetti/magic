@@ -1,1 +1,151 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: Prompt;
+}
+
+.block-hourly__hour .meridiem {
+  font-size: 18px;
+}
+
+ion-accordion-group{
+  ion-accordion {
+      .ion-accordion-toggle-icon {
+          display: none;
+      }
+  }
+}
+
+ion-content.ioncontent {
+  --background: #394659 !important;
+}
+
+ion-item.hydrated {
+  --ion-item-background:transparent !important;
+  background-color: transparent !important;
+}
+
+
+.item-native {
+  padding:0 !important;
+
+}
+
+.hydrated {
+  background-color: transparent !important;
+}
+
+@font-face{
+  font-family:Prompt;
+  src:url(../src/assets/Fonts/prompt-thin-webfont.eot);
+  src:url(../src/assets/Fonts/prompt-thin-webfont.eot) 
+  format("embedded-opentype"),url(../src/assets/Fonts/prompt-thin-webfont.woff) 
+  format("woff"),url(../src/assets/Fonts/prompt-thin-webfont.ttf) 
+  format("truetype"),url(../src/assets/Fonts/prompt-thin-webfont.svg#prompt-thin-webfont) 
+  format("svg");
+  font-weight:100;
+  font-style:normal;
+  font-display:auto;
+}
+
+@font-face{
+  font-family:Prompt;
+  src:url(../src/assets/Fonts/prompt-extralight-webfont.eot);
+  src:url(../src/assets/Fonts/prompt-extralight-webfont.eot) 
+  format("embedded-opentype"),url(../src/assets/Fonts/prompt-extralight-webfont.woff) 
+  format("woff"),url(../src/assets/Fonts/prompt-extralight-webfont.ttf) 
+  format("truetype"),url(../src/assets/Fonts/prompt-extralight-webfont.svg#prompt-extralight-webfont) 
+  format("svg");
+  font-weight:200;
+  font-style:normal;
+  font-display:auto;
+}
+
+@font-face{
+  font-family:Prompt;
+  src:url(../src/assets/Fonts/prompt-light-webfont.eot);
+  src:url(../src/assets/Fonts/prompt-light-webfont.eot) 
+  format("embedded-opentype"),url(../src/assets/Fonts/prompt-light-webfont.woff) 
+  format("woff"),url(../src/assets/Fonts/prompt-light-webfont.ttf) 
+  format("truetype"),url(../src/assets/Fonts/prompt-light-webfont.svg#prompt-light-webfont) 
+  format("svg");
+  font-weight:300;
+  font-style:normal;
+  font-display:auto;
+}
+
+@font-face{
+  font-family:Prompt;
+  src:url(../src/assets/Fonts/prompt-regular-webfont.eot);
+  src:url(../src/assets/Fonts/prompt-regular-webfont.eot) 
+  format("embedded-opentype"),url(../src/assets/Fonts/prompt-regular-webfont.woff) 
+  format("woff"),url(../src/assets/Fonts/prompt-regular-webfont.ttf) 
+  format("truetype"),url(../src/assets/Fonts/prompt-regular-webfont.svg#prompt-regular-webfont) 
+  format("svg");
+  font-weight:400;
+  font-style:normal;
+  font-display:auto;
+}
+
+@font-face{
+  font-family:Prompt;
+  src:url(../src/assets/Fonts/prompt-medium-webfont.eot);
+  src:url(../src/assets/Fonts/prompt-medium-webfont.eot) 
+  format("embedded-opentype"),url(../src/assets/Fonts/prompt-medium-webfont.woff) 
+  format("woff"),url(../src/assets/Fonts/prompt-medium-webfont.ttf) 
+  format("truetype"),url(../src/assets/Fonts/prompt-medium-webfont.svg#prompt-medium-webfont) 
+  format("svg");
+  font-weight:500;
+  font-style:normal;
+  font-display:auto;
+}
+
+@font-face{
+  font-family:Prompt;
+  src:url(../src/assets/Fonts/prompt-semibold-webfont.eot);
+  src:url(../src/assets/Fonts/prompt-semibold-webfont.eot) 
+  format("embedded-opentype"),url(../src/assets/Fonts/prompt-semibold-webfont.woff) 
+  format("woff"),url(../src/assets/Fonts/prompt-semibold-webfont.ttf) 
+  format("truetype"),url(../src/assets/Fonts/prompt-semibold-webfont.svg#prompt-semibold-webfont) 
+  format("svg");
+  font-weight:600;
+  font-style:normal;
+  font-display:auto;
+}
+
+@font-face{
+  font-family:Prompt;
+  src:url(../src/assets/Fonts/prompt-bold-webfont.eot);
+  src:url(../src/assets/Fonts/prompt-bold-webfont.eot) 
+  format("embedded-opentype"),url(../src/assets/Fonts/prompt-bold-webfont.woff) 
+  format("woff"),url(../src/assets/Fonts/prompt-bold-webfont.ttf) 
+  format("truetype"),url(../src/assets/Fonts/prompt-bold-webfont.svg#prompt-bold-webfont) 
+  format("svg");
+  font-weight:700;
+  font-style:normal;
+  font-display:auto;
+}
+
+@font-face{
+  font-family:Prompt;
+  src:url(../src/assets/Fonts/prompt-extrabold-webfont.eot);
+  src:url(../src/assets/Fonts/prompt-extrabold-webfont.eot) 
+  format("embedded-opentype"),url(../src/assets/Fonts/prompt-extrabold-webfont.woff) 
+  format("woff"),url(../src/assets/Fonts/prompt-extrabold-webfont.ttf) 
+  format("truetype"),url(../src/assets/Fonts/prompt-extrabold-webfont.svg#prompt-extrabold-webfont) 
+  format("svg");
+  font-weight:800;
+  font-style:normal;
+  font-display:auto;
+}
+
+@font-face{
+  font-family:Prompt;
+  src:url(../src/assets/Fonts/prompt-black-webfont.eot);
+  src:url(../src/assets/Fonts/prompt-black-webfont.eot) 
+  format("embedded-opentype"),url(../src/assets/Fonts/prompt-black-webfont.woff) 
+  format("woff"),url(../src/assets/Fonts/prompt-black-webfont.ttf) 
+  format("truetype"),url(../src/assets/Fonts/prompt-black-webfont.svg#prompt-black-webfont) 
+  format("svg");
+  font-weight:900;
+  font-style:normal;
+  font-display:auto;
+}

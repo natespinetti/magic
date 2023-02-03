@@ -1,0 +1,9 @@
+.color {
+    color: white;
+}
+
+ion-accordion-group>ion-accordion>ion-item.hydrated,
+ion-accordion-group>ion-accordion>ion-item {
+    --ion-item-background: transparent !important;
+    background-color: transparent !important;
+}

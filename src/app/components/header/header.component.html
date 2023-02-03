@@ -1,0 +1,55 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar class="block-header__toolbar">
+      <ion-title class="block-header__title">
+        <a routerLink="/"><img class="block-header__logo" src="{{location.parkInfo.logo}}"></a>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding ioncontent">
+    <div *ngIf="location.router.url == '/florida'">
+      <a routerLink="/"><img class="block-header__logos" src="{{location.parkInfo.Florida.logo}}"></a>
+    </div>
+    <div *ngIf="location.router.url == '/california'">
+      <a routerLink="/california"><img class="block-header__logos" src="{{location.parkInfo.California.logo}}"></a>
+    </div>
+    <div *ngIf="location.router.url == '/hong-kong'">
+      <a routerLink="/hong-kong"><img class="block-header__logos" src="{{location.parkInfo.HongKong.logo}}"></a>
+    </div>
+    <div *ngIf="location.router.url == '/paris'">
+      <a routerLink="/paris"><img class="block-header__logos" src="{{location.parkInfo.Paris.logo}}"></a>
+    </div>
+    <div *ngIf="location.router.url == '/shanghai'">
+      <a routerLink="/shanghai"><img class="block-header__logos" src="{{location.parkInfo.Shanghai.logo}}"></a>
+    </div>
+    <div *ngIf="location.router.url == '/tokyo'">
+      <a routerLink="/tokyo"><img class="block-header__logos" src="{{location.parkInfo.Florida.logo}}"></a>
+    </div>
+
+    <button class="block-header__link" [class.active]="location.router.url == '/florida'"
+      routerLink="/florida">Florida</button>
+    <button class="block-header__link" [class.active]="location.router.url == '/california'"
+      routerLink="/california">California</button>
+    <button class="block-header__link" [class.active]="location.router.url == '/hong-kong'" routerLink="/hong-kong">Hong
+      Kong</button>
+    <button class="block-header__link" [class.active]="location.router.url == '/paris'"
+      routerLink="/paris">Paris</button>
+    <button class="block-header__link" [class.active]="location.router.url == '/shanghai'"
+      routerLink="/shanghai">Shanghai</button>
+    <button class="block-header__link" [class.active]="location.router.url == '/tokyo'"
+      routerLink="/tokyo">Tokyo</button>
+
+    <button class="block-header__link end" [class.active]="location.router.url == '/about'"
+      routerLink="/about">About</button>
+
+  </ion-content>
+</ion-menu>
+<div class="block-header" id="main-content">
+  <ion-header>
+    <ion-toolbar color="transparent">
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+</div>

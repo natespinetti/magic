@@ -1,0 +1,36 @@
+.block-humidity {
+    margin-bottom: 2rem;
+    background-color: rgba(47, 59, 77, 0.95);
+    border-radius: 30px;
+    padding: 1.25rem;
+    overflow-x: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    &__wrapper {
+        display: grid;
+        grid-gap: 10px;
+    }
+
+    &__temp {
+        margin-top: -0.25rem;
+        font-weight: 600;
+        font-size: 44px;
+        text-align: left;
+        margin-left: 4px;
+        margin-bottom: 0;
+    }
+
+    &__head {
+        line-height: 1;
+        text-align: left;
+        color: #5c687a;
+        font-size: 15px;
+        display: flex;
+
+        &-inner {
+            padding-left: 4px;
+            margin: 0;
+            font-weight: 600;
+            padding-top: 1px;
+        }
+    }
+}
