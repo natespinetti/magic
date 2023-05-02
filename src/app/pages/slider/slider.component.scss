@@ -2,6 +2,10 @@
     color: white;
 }
 
+.swiper-slide {
+    overflow-x: hidden;
+}
+
 ion-accordion-group>ion-accordion>ion-item.hydrated,
 ion-accordion-group>ion-accordion>ion-item {
     --ion-item-background: transparent !important;
