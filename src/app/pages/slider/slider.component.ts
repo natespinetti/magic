@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonSlides } from '@ionic/angular';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 import { LocationApiService } from 'src/app/services/location-api.service';
 
 @Component({
@@ -13,45 +15,82 @@ export class SliderComponent implements OnInit {
   unixTime = this.location.unixTime;
   unixDay = this.location.unixDay;
   unixSun = this.location.unixSun;
-  onSlideChange:any;
-  
+  @ViewChild('slider', { static: true }) slider: IonSlides;
+
   constructor(private loc: LocationApiService, private router: Router){
-    this.onSlideChange = function onSlideChange() {
-
-      let a = document.querySelectorAll('ion-slide'); 
-
-        Array.from(a).forEach(function(el) {
-          if (el.classList.contains('florida') && el.classList.contains('swiper-slide-active')) {
-            router.navigate(['/florida']);
-          } else if (el.classList.contains('california') && el.classList.contains('swiper-slide-active')) {
-            router.navigate(['/california']);
-          } else if (el.classList.contains('hongkong') && el.classList.contains('swiper-slide-active')) {
-            router.navigate(['/hong-kong']);
-          } else if (el.classList.contains('paris') && el.classList.contains('swiper-slide-active')) {
-            router.navigate(['/paris']);
-          } else if (el.classList.contains('shanghai') && el.classList.contains('swiper-slide-active')) {
-            router.navigate(['/shanghai']);
-          } else if (el.classList.contains('tokyo') && el.classList.contains('swiper-slide-active')) {
-            router.navigate(['/tokyo']);
-          }
-      
-        });
-      
-    }
+    this.slider = {} as IonSlides;
   }
+
   ngOnInit(): void {
-    
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      const activeRoute = this.router.url.split('/')[1];
+      let slideIndex;
+      switch (activeRoute) {
+        case 'florida':
+          slideIndex = 0;
+          break;
+        case 'california':
+          slideIndex = 1;
+          break;
+        case 'hong-kong':
+          slideIndex = 2;
+          break;
+        case 'paris':
+          slideIndex = 3;
+          break;
+        case 'shanghai':
+          slideIndex = 4;
+          break;
+        case 'tokyo':
+          slideIndex = 5;
+          break;
+        default:
+          slideIndex = 0;
+          break;
+      }
+      this.slider.slideTo(slideIndex);
+    });
   }
-
-    public slideConfig = {
-        speed: 500,
-  };
-
-
 
   ngAfterViewInit(): void {
     this.unixTime();
     this.unixDay();
     this.unixSun();
+  }
+
+  public slideConfig = {
+        speed: 500,
+  };
+
+  onSlideChange(): void {
+    this.slider.getActiveIndex().then(index => {
+      let slideIndex;
+      switch (index) {
+        case 0:
+          slideIndex = 'florida';
+          break;
+        case 1:
+          slideIndex = 'california';
+          break;
+        case 2:
+          slideIndex = 'hong-kong';
+          break;
+        case 3:
+          slideIndex = 'paris';
+          break;
+        case 4:
+          slideIndex = 'shanghai';
+          break;
+        case 5:
+          slideIndex = 'tokyo';
+          break;
+        default:
+          slideIndex = 'florida';
+          break;
+      }
+      this.router.navigate(['/' + slideIndex]);
+    });
   }
 }
