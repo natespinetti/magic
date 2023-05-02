@@ -1,7 +1,7 @@
 <div class="contain">
     <div class="wrap">
         <div class="block-loc">
-            <a routerLink="/florida">
+            <a routerLink="/florida" (click)="onLinkClick(0)">
                 <div class="block-loc__wrapper" [ngClass]="dateBG(dateFl) ? 'day' : 'night'">
                     <p class="block-loc__head">{{location.parkInfo.Florida.place}}</p>
                     <p class="block-loc__temp">{{florida.weather.current.temp | kelvin}}&deg;</p>
@@ -11,7 +11,7 @@
                 </div>
             </a>
 
-            <a routerLink="/california">
+            <a routerLink="/california" (click)="onLinkClick(1)">
                 <div class="block-loc__wrapper" [ngClass]="dateBG(dateCa) ? 'day' : 'night'">
                     <p class="block-loc__head">{{location.parkInfo.California.place}}</p>
                     <p class="block-loc__temp">{{california.weather.current.temp | kelvin}}&deg;</p>
@@ -21,7 +21,7 @@
                 </div>
             </a>
 
-            <a routerLink="/hong-kong">
+            <a routerLink="/hong-kong" (click)="onLinkClick(2)">
                 <div class="block-loc__wrapper" [ngClass]="dateBG(dateHK) ? 'day' : 'night'">
                     <p class="block-loc__head">{{location.parkInfo.HongKong.place}}</p>
                     <p class="block-loc__temp">{{hongkong.weather.current.temp | kelvin}}&deg;</p>
@@ -31,7 +31,7 @@
                 </div>
             </a>
 
-            <a routerLink="/paris">
+            <a routerLink="/paris" (click)="onLinkClick(3)">
                 <div class="block-loc__wrapper" [ngClass]="dateBG(datePa) ? 'day' : 'night'">
                     <p class="block-loc__head">{{location.parkInfo.Paris.place}}</p>
                     <p class="block-loc__temp">{{paris.weather.current.temp | kelvin}}&deg;</p>
@@ -41,7 +41,7 @@
                 </div>
             </a>
 
-            <a routerLink="/shanghai">
+            <a routerLink="/shanghai" (click)="onLinkClick(4)">
                 <div class="block-loc__wrapper" [ngClass]="dateBG(dateSh) ? 'day' : 'night'">
                     <p class="block-loc__head">{{location.parkInfo.Shanghai.place}}</p>
                     <p class="block-loc__temp">{{shanghai.weather.current.temp | kelvin}}&deg;</p>
@@ -51,7 +51,7 @@
                 </div>
             </a>
 
-            <a routerLink="/tokyo">
+            <a routerLink="/tokyo" (click)="onLinkClick(5)">
                 <div class="block-loc__wrapper" [ngClass]="dateBG(dateTk) ? 'day' : 'night'">
                     <p class="block-loc__head">{{location.parkInfo.Tokyo.place}}</p>
                     <p class="block-loc__temp">{{tokyo.weather.current.temp | kelvin}}&deg;</p>

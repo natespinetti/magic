@@ -1,4 +1,5 @@
-<ion-slides #slider pager="false" class="color" [options]="slideConfig" (ionSlideDidChange)="onSlideChange()" >
+<app-header [location]="location"></app-header>
+<ion-slides #slider pager="false" class="color" [options]="slideConfig" (ionSlideDidChange)="onSlideChange()">
     <ion-slide class="florida">
         <app-florida></app-florida>
     </ion-slide>

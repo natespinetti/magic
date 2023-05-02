@@ -1,23 +1,26 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { IonSlides } from '@ionic/angular';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { LocationApiService } from 'src/app/services/location-api.service';
+import { SlideService } from 'src/app/services/slide.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.scss']
 })
-export class SliderComponent implements OnInit {
+export class SliderComponent implements OnInit, OnDestroy {
   
   location = this.loc;
   unixTime = this.location.unixTime;
   unixDay = this.location.unixDay;
   unixSun = this.location.unixSun;
   @ViewChild('slider', { static: true }) slider: IonSlides;
+  private slideIndexSubscription!: Subscription;
 
-  constructor(private loc: LocationApiService, private router: Router){
+  constructor(private loc: LocationApiService, private router: Router, private slideService: SlideService){
     this.slider = {} as IonSlides;
   }
 
@@ -51,6 +54,9 @@ export class SliderComponent implements OnInit {
           break;
       }
       this.slider.slideTo(slideIndex);
+    });
+    this.slideIndexSubscription = this.slideService.currentSlideIndex.subscribe((index: number) => {
+      this.slider.slideTo(index);
     });
   }
 
@@ -92,5 +98,10 @@ export class SliderComponent implements OnInit {
       }
       this.router.navigate(['/' + slideIndex]);
     });
+  }
+
+  ngOnDestroy(): void {
+    // Unsubscribe to avoid memory leaks
+    this.slideIndexSubscription.unsubscribe();
   }
 }

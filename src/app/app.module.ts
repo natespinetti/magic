@@ -29,6 +29,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { SliderComponent } from './pages/slider/slider.component';
+import { SlideService } from './services/slide.service';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,7 @@ import { SliderComponent } from './pages/slider/slider.component';
     HttpClientModule,
     IonicModule.forRoot()
   ],
-  providers: [LocationApiService],
+  providers: [LocationApiService, SlideService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

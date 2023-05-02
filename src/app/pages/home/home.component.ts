@@ -6,6 +6,7 @@ import { LocationApiService } from 'src/app/services/location-api.service';
 import { ParisService } from 'src/app/services/paris.service';
 import { ShanghaiService } from 'src/app/services/shanghai.service';
 import { TokyoService } from 'src/app/services/tokyo.service';
+import { SlideService } from 'src/app/services/slide.service';
 
 @Component({
   selector: 'app-home',
@@ -32,7 +33,7 @@ export class HomeComponent implements OnInit {
     dateTk = new Date().toLocaleString("en-US", { timeZone: "Asia/Tokyo", hourCycle: 'h23', hour: "2-digit"  });
     datePa = new Date().toLocaleString("en-US", { timeZone: "Europe/Paris", hourCycle: 'h23', hour: "2-digit"  });
 
-  constructor(private loc: LocationApiService, private fl: FloridaService, private ca: CaliService, private hk: HongkongService, private sh: ShanghaiService, private tk: TokyoService, private pa: ParisService) {
+  constructor(private loc: LocationApiService, private fl: FloridaService, private ca: CaliService, private hk: HongkongService, private sh: ShanghaiService, private tk: TokyoService, private pa: ParisService, private slideService: SlideService) {
     this.arr = ['06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18'];
     this.hours = [12,1,2,3,4,5,6,7,8,9,10,11,12,1,2,3,4,5,6,7,8,9,10,11];
 
@@ -49,6 +50,10 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit(): void {
+  }
+
+  onLinkClick(slideIndex: number): void {
+    this.slideService.changeSlideIndex(slideIndex);
   }
 
 }
