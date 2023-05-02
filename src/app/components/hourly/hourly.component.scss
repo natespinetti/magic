@@ -12,7 +12,6 @@
         display: grid;
         grid-template-columns: auto;
         overflow-x: scroll;
-        touch-action: pan-x;
         grid-template-rows: 1fr;
         grid-gap: 10px;
     }
