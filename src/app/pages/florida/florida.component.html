@@ -1,9 +1,9 @@
 <div class="container">
         <app-background [location]="location"></app-background>
-        <div class="wrapper swiper-no-swiping">
+        <div class="wrapper">
             <app-header [location]="location"></app-header>
             <app-hero [location]="location"></app-hero>
-            <app-hourly [location]="location"></app-hourly>
+            <app-hourly class="swiper-no-swiping" [location]="location"></app-hourly>
             <app-eightday [location]="location"></app-eightday>
             <div class="cols">
                 <app-precip [location]="location"></app-precip>
