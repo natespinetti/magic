@@ -6,7 +6,6 @@
 
 .contain {
     width: 100vw;
-    height: 100vh;
     background: #394659;
 }
 
@@ -14,7 +13,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1.25rem;
-    padding: 4rem 0 6rem;
+    padding: 3rem 0;
 
     a {
         text-decoration: none;
@@ -83,6 +82,7 @@
     &__logo {
         width: 60%;
         margin: 0 auto;
+        padding-bottom: 3rem;
 
         &-con {
             width: 100%;
